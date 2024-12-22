@@ -8,7 +8,7 @@ func _on_PlayButton_pressed():
 		HowlerAPI.stop_sound()  # Stop the sound
 		$PlayButton.text = "Play Sound"  # Change button text to "Play Sound"
 	else:
-		HowlerAPI.load_sound("res://sounds/music.mp3", 0.5)  # Replace with your sound path
+		HowlerAPI.load_sound("https://jacksonelfersbd0.github.io/ap1/clap.wav", 0.5)  # Replace with your sound path
 		HowlerAPI.play_sound()  # Play the sound
 		$PlayButton.text = "Stop Sound"  # Change button text to "Stop Sound"
 	is_playing = !is_playing
@@ -16,7 +16,7 @@ func _on_PlayButton_pressed():
 # Initialization function
 func _ready():
 	# Set the button text initially
-	$PlayButton.text = "Play Sound"
+	$PlayButton.text = "Play Sound 2"
 	
 	# Connect button signal to function
 	$PlayButton.connect("pressed", self, "_on_PlayButton_pressed")
