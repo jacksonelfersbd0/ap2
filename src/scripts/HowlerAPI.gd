@@ -16,10 +16,10 @@ func load_sound(path: String, volume: float = 1.0) -> void:
 
 # Play the sound
 func play_sound() -> void:
-	# Ensure that the AudioContext is resumed after a user gesture
+	# Check if the audio context needs to be resumed after user interaction
 	if not audio_context_resumed:
 		var js_code = """
-			// If the audio context isn't resumed, we resume it after a user gesture
+			// If the audio context isn't resumed, resume it after the user interaction
 			if (typeof Howler !== 'undefined' && Howler.ctx) {
 				Howler.ctx.resume();  // This resumes the AudioContext
 			}
